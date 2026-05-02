@@ -1,0 +1,17 @@
+spring:
+  config:
+    import: "optional:configserver:http://localhost:9090"
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+    info:
+      access: unrestricted
