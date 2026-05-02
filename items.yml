@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5433/product_catalog_db"
+    username: postgres
+    password: bhanu0218
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+server:
+  port: 8080
+
+info:
+  app:
+    name: "items"
+    description: "items catalog service for our ecommerce application"
