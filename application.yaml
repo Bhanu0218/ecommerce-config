@@ -13,8 +13,9 @@ management:
       show-details: always
       probes:
         enabled: true
-    info:
-      access: unrestricted
+  info:
+    env:
+      enabled: true
 
 eureka:
   instance:
