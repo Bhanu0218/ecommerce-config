@@ -11,3 +11,14 @@ spring:
             locator:
               enabled: true
               lower-case-service-id: true
+
+
+management:
+  endpoint:
+    gateway:
+      access: unrestricted
+
+info:
+  app:
+    name: "gateway-server"
+    description: "edge server to my ecommerce microservice network"
