@@ -25,7 +25,7 @@ info:
 
 resilience4j.circuitbreaker:
   configs:
-    ordersCircuitBreaker:
+    itemsCircuitBreaker:
       sliding-window-size: 10
       permitted-number-of-calls-in-half-open-state: 5
       failure-rate-threshold: 50
