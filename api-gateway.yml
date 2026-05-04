@@ -22,3 +22,12 @@ info:
   app:
     name: "gateway-server"
     description: "edge server to my ecommerce microservice network"
+
+resilience4j.circuitbreaker:
+  configs:
+    ordersCircuitBreaker:
+      sliding-window-size: 10
+      permitted-number-of-calls-in-half-open-state: 2
+      failure-rate-threshold: 50
+      wait-duration-in-open-state:
+        seconds: 60
