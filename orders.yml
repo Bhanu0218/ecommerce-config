@@ -11,7 +11,7 @@ spring:
   cloud:
     openfeign:
       circuitbreaker:
-        enabled: true
+        enabled: false
 
 server:
   port: 8085
