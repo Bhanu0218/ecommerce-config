@@ -20,7 +20,7 @@ info:
   app:
     name: "orders"
     description: "orders service of our ecommerce application"
-
+    
 resilience4j.circuitbreaker:
   configs:
     default:
