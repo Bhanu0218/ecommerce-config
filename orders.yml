@@ -28,4 +28,4 @@ resilience4j.circuitbreaker:
       permitted-number-of-calls-in-half-open-state: 5
       failure-rate-threshold: 50
       wait-duration-in-open-state:
-        seconds: 60
+        seconds: 10
