@@ -20,3 +20,12 @@ info:
     description: "items catalog service for our ecommerce application"
 
 
+resilience4j:
+  retry:
+    instances:
+      getItemsId:
+        wait-duration:
+          seconds: 0.1
+        max-attempts: 3
+        exponential-backoff-multiplier: 2
+        enable-exponential-backoff: true
