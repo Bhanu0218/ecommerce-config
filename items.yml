@@ -8,11 +8,7 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  cloud:
-    gateway:
-      httpclient:
-        connect-timeout: 2000        # 2 seconds (connection timeout)
-        response-timeout: 2s
+
 
 
 server:
