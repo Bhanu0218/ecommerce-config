@@ -17,3 +17,11 @@ info:
   app:
     name: "items"
     description: "items catalog service for our ecommerce application"
+
+
+spring:
+  cloud:
+    gateway:
+      httpclient:
+        connect-timeout: 2000        # 2 seconds (connection timeout)
+        response-timeout: 2s         # 3 seconds (VERY IMPORTANT)
