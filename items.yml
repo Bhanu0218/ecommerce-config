@@ -30,9 +30,4 @@ resilience4j:
         exponential-max-wait-duration: 1000ms
         ignore-exceptions:
           - java.lang.NullPointerException
-  ratelimiter:
-    instances:
-      getItemById:
-        limit-refresh-period: 5000ms
-        timeout-duration: 1000ms
-        limit-for-period: 1
+
