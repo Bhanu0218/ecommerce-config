@@ -33,6 +33,6 @@ resilience4j:
   ratelimiter:
     instances:
       getItemById:
-        limit-refresh-period: 5000ms
+        limit-refresh-period: 15000ms
         timeout-duration: 1000ms
         limit-for-period: 1
