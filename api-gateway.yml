@@ -31,11 +31,28 @@ info:
     name: "gateway-server"
     description: "edge server to my ecommerce microservice network"
 
-resilience4j.circuitbreaker:
-  configs:
-    default:
-      sliding-window-size: 10
-      permitted-number-of-calls-in-half-open-state: 5
-      failure-rate-threshold: 50
-      wait-duration-in-open-state:
-        seconds: 60
+resilience4j:
+  circuitbreaker:
+    instances:
+      itemsCircuitBreaker:
+        register-health-indicator: true
+        sliding-window-type: count_based
+        sliding-window-size: 20
+        minimum-number-of-calls: 10
+        failure-rate-threshold: 50
+        automatic-transition-from-open-to-half-open-enabled: true
+        permitted-number-of-calls-in-half-open-state: 5
+        wait-duration-in-open-state: 30s
+        slow-call-rate-threshold: 50
+        slow-call-duration-threshold: 2s
+      ordersCircuitBreaker:
+        register-health-indicator: true
+        sliding-window-type: count_based
+        sliding-window-size: 20
+        minimum-number-of-calls: 10
+        failure-rate-threshold: 50
+        automatic-transition-from-open-to-half-open-enabled: true
+        permitted-number-of-calls-in-half-open-state: 5
+        wait-duration-in-open-state: 30s
+        slow-call-rate-threshold: 50
+        slow-call-duration-threshold: 2s
