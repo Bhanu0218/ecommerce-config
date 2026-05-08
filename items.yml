@@ -20,17 +20,7 @@ info:
     description: "items catalog service for our ecommerce application"
 
 resilience4j:
-  retry:
-    instances:
-      getItemsId:
-        wait-duration: 100ms
-        max-attempts: 15
-        exponential-backoff-multiplier: 2
-        enable-exponential-backoff: true
-        exponential-max-wait-duration: 1000ms
-        ignore-exceptions:
-          - java.lang.NullPointerException
-          - io.github.resilience4j.ratelimiter.RequestNotPermitted
+  
   ratelimiter:
     instances:
       getItemById:
