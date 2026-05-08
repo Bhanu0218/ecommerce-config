@@ -16,7 +16,7 @@ spring:
             response-timeout: 15s
   data:
     redis:
-      host: localhost
+      host: redis
       port: 6379
       connect-timeout: 2s
       timeout: 1s
@@ -25,6 +25,15 @@ management:
   endpoint:
     gateway:
       access: unrestricted
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: "http://eureka-server:9090/eureka/"
 
 info:
   app:
