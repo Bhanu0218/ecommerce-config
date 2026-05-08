@@ -20,7 +20,6 @@ info:
     description: "items catalog service for our ecommerce application"
 
 resilience4j:
-  
   ratelimiter:
     instances:
       getItemById:
