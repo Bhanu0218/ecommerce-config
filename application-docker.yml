@@ -1,0 +1,38 @@
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+  info:
+    env:
+      enabled: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: "http://eureka-server:9090/eureka/"
+
+
+logging:
+  level:
+    root: INFO
+
+    com.shoppy: DEBUG
+
+    io.github.resilience4j: DEBUG
+
+    org.springframework.cloud.gateway: DEBUG
+
+    org.springframework.cloud.openfeign: DEBUG
