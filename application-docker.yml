@@ -15,14 +15,7 @@ management:
     env:
       enabled: true
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: "http://eureka-server:9090/eureka/"
+
 
 
 logging:
