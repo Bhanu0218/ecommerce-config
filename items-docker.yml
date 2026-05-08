@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: "jdbc:postgresql://postgres-db:5433/product_catalog_db"
+    username: postgres
+    password: bhanu0218
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+
+server:
+  port: 8080
+
+info:
+  app:
+    name: "items"
+    description: "items catalog service for our ecommerce application"
+
+resilience4j:
+  ratelimiter:
+    instances:
+      getItemById:
+        limit-for-period: 1
+        limit-refresh-period: 5s
+        timeout-duration: 1s
+
+logging:
+  level:
+    io.github.resilience4j: DEBUG
