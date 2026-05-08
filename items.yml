@@ -24,7 +24,7 @@ resilience4j:
     instances:
       getItemsId:
         wait-duration: 100ms
-        max-attempts: 5
+        max-attempts: 15
         exponential-backoff-multiplier: 2
         enable-exponential-backoff: true
         exponential-max-wait-duration: 1000ms
@@ -34,10 +34,8 @@ resilience4j:
     instances:
       getItemById:
         limit-for-period: 1
-        limit-refresh-period:
-          seconds: 5
-        timeout-duration:
-          seconds: 1  
+        limit-refresh-period: 5s
+        timeout-duration: 1s
 
 logging:
   level:
