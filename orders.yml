@@ -37,8 +37,7 @@ resilience4j:
         wait-duration-in-open-state:
           seconds: 30
         slow-call-rate-threshold: 50
-        slow-call-duration-threshold:
-          seconds: 2
+        slow-call-duration-threshold: 2s
   retry:
     instances:
       getItemsId:
