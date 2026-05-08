@@ -30,6 +30,7 @@ resilience4j:
         exponential-max-wait-duration: 1000ms
         ignore-exceptions:
           - java.lang.NullPointerException
+          - io.github.resilience4j.ratelimiter.RequestNotPermitted
   ratelimiter:
     instances:
       getItemById:
