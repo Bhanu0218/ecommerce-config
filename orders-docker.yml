@@ -21,7 +21,14 @@ info:
     name: "orders"
     description: "orders service of our ecommerce application"
 
-
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: "http://eureka-server:9070/eureka/"
 
 resilience4j:
   circuitbreaker:
