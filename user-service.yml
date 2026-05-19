@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/User_db
+    username: postgres
+    password: bhanu0218
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 7080
+
+info:
+  app:
+    name: "user-service"
+    description: user service that handles login and signup for our ecommerce application
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:9070/eureka/
+    register-with-eureka: true
+    fetch-registry: true
